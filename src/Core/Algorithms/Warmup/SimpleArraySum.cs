@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace Warmup
 {
+    /// <summary>
+    /// https://www.hackerrank.com/challenges/simple-array-sum
+    /// </summary>
     public class SimpleArraySum
     {
         public static void Main()
