@@ -1,0 +1,10 @@
+[
+  {
+    "Input": "2\r\n3",
+    "Expected": "5"
+  },
+  {
+    "Input": "4\r\n5",
+    "Expected": "9"
+  }
+]
