@@ -12,7 +12,7 @@ namespace Warmup
         {
             Console.ReadLine();
             string[] tmpArray = Console.ReadLine().Split(' ');
-            int[] array = Array.ConvertAll(tmpArray, Int32.Parse);
+            int[] array = Array.ConvertAll(tmpArray, int.Parse);
             Console.WriteLine(array.Sum());
         }
     }
