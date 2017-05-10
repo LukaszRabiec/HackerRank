@@ -9,13 +9,15 @@ namespace TestsCore
 {
     public abstract class BaseTest
     {
-        protected abstract void RunLogic();
+        protected delegate void LogicMethod();
 
         private static ITestOutputHelper _output;
+        private static LogicMethod _runLogic;
 
-        protected BaseTest(ITestOutputHelper output)
+        protected BaseTest(ITestOutputHelper output, LogicMethod logicMethod)
         {
             _output = output;
+            _runLogic = logicMethod;
         }
 
         [Fact]
@@ -32,7 +34,7 @@ namespace TestsCore
                 var reader = new StringReader(testCase.Input);
                 Console.SetIn(reader);
 
-                RunLogic();
+                _runLogic();
 
                 var result = writer.ToString().TrimEnd('\r', '\n');
                 Assert.Equal(testCase.Expected, result);

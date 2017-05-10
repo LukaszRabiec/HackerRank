@@ -5,13 +5,8 @@ namespace Warmup.Tests
 {
     public class SimpleArraySumTest : BaseTest
     {
-        public SimpleArraySumTest(ITestOutputHelper output) : base(output)
+        public SimpleArraySumTest(ITestOutputHelper output) : base(output, SimpleArraySum.Main)
         {
-        }
-
-        protected override void RunLogic()
-        {
-            SimpleArraySum.Main();
         }
     }
 }
