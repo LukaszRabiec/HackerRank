@@ -55,6 +55,7 @@
     <Compile Include="AVeryBigSumTest.cs" />
     <Compile Include="CompareTheTripletsTest.cs" />
     <Compile Include="DiagonalDifferenceTest.cs" />
+    <Compile Include="MiniMaxSumTest.cs" />
     <Compile Include="PlusMinusTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleArraySumTest.cs" />
