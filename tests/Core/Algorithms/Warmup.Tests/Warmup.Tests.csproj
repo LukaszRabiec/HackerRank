@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AVeryBigSumTest.cs" />
     <Compile Include="CompareTheTripletsTest.cs" />
+    <Compile Include="DiagonalDifferenceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleArraySumTest.cs" />
     <Compile Include="SolveMeFirstTest.cs" />
@@ -70,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TestsCases\DiagonalDifference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestsCases\AVeryBigSum.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
