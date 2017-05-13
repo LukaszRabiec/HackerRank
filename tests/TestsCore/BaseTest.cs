@@ -12,19 +12,17 @@ namespace TestsCore
         protected delegate void LogicMethod();
 
         private static ITestOutputHelper _output;
-        private static LogicMethod _runLogic;
 
-        protected BaseTest(ITestOutputHelper output, LogicMethod logicMethod)
+        protected BaseTest(ITestOutputHelper output)
         {
             _output = output;
-            _runLogic = logicMethod;
         }
 
-        [Fact]
-        public void Run()
+        protected void Run(LogicMethod logicMethod)
         {
             int i = 0;
-            var testCases = GetTestCases();
+            var methodClassName = logicMethod.Method.ReflectedType?.Name;
+            var testCases = GetTestCases(methodClassName);
 
             foreach (var testCase in testCases)
             {
@@ -34,7 +32,7 @@ namespace TestsCore
                 var reader = new StringReader(testCase.Input);
                 Console.SetIn(reader);
 
-                _runLogic();
+                logicMethod();
 
                 var result = writer.ToString().TrimEnd('\r', '\n');
                 Assert.Equal(testCase.Expected, result);
@@ -47,10 +45,9 @@ namespace TestsCore
             }
         }
 
-        private IEnumerable<TestData> GetTestCases()
+        private IEnumerable<TestData> GetTestCases(string methodClassName)
         {
-            var childClassName = GetType().Name;
-            var testsFileName = childClassName.Replace("Test", ".json");
+            var testsFileName = methodClassName + ".json";
 
             return FromJsonFile(testsFileName);
         }

@@ -52,17 +52,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AVeryBigSumTest.cs" />
-    <Compile Include="BirthdayCakeCandlesTest.cs" />
-    <Compile Include="CompareTheTripletsTest.cs" />
-    <Compile Include="DiagonalDifferenceTest.cs" />
-    <Compile Include="MiniMaxSumTest.cs" />
-    <Compile Include="PlusMinusTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleArraySumTest.cs" />
-    <Compile Include="SolveMeFirstTest.cs" />
-    <Compile Include="StaircaseTest.cs" />
-    <Compile Include="TimeConversionTest.cs" />
+    <Compile Include="WarmupTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\src\Core\Algorithms\Warmup\Warmup.csproj">
