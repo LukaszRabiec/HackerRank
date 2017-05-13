@@ -1,8 +1,9 @@
 ﻿using TestsCore;
+using Warmup;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Warmup.Tests
+namespace Algorithms.Tests
 {
     public class WarmupTests : BaseTest
     {
