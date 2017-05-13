@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AVeryBigSum.cs" />
+    <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="CompareTheTriplets.cs" />
     <Compile Include="DiagonalDifference.cs" />
     <Compile Include="MiniMaxSum.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="SimpleArraySum.cs" />
     <Compile Include="SolveMeFirst.cs" />
     <Compile Include="Staircase.cs" />
+    <Compile Include="TimeConversion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

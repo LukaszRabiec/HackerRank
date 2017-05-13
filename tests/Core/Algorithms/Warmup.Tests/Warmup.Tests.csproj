@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AVeryBigSumTest.cs" />
+    <Compile Include="BirthdayCakeCandlesTest.cs" />
     <Compile Include="CompareTheTripletsTest.cs" />
     <Compile Include="DiagonalDifferenceTest.cs" />
     <Compile Include="MiniMaxSumTest.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="SimpleArraySumTest.cs" />
     <Compile Include="SolveMeFirstTest.cs" />
     <Compile Include="StaircaseTest.cs" />
+    <Compile Include="TimeConversionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\src\Core\Algorithms\Warmup\Warmup.csproj">
@@ -74,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TestsCases\TimeConversion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestsCases\BirthdayCakeCandles.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TestsCases\PlusMinus.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
