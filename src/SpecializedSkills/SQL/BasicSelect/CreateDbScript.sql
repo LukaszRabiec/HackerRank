@@ -1,4 +1,5 @@
 -- First you must create db called HackerRank
+-- https://www.hackerrank.com/domains/sql/select
 
 USE HackerRank
 GO 
@@ -11,14 +12,24 @@ CREATE TABLE City
 	[Population] int NOT NULL)
 GO
 
-INSERT City (Id, [Name], CountryCode, District, [Population])
-    VALUES (6, 'Rotterdam', 'NLD', 'Zuid-Holland', 593321),
-	   (3878, 'Scottsdale', 'USA', 'Arizona', 202705 ),
-	   (3965, 'Corona', 'USA', 'California', 124966 ),
-	   (3973, 'Concord', 'USA', 'California', 121780),
-	   (3977, 'Cedar Rapids', 'USA', 'Iowa', 120758),
-	   (3982, 'Coral Springs', 'USA', 'Florida', 117549),
-	   (4054, 'Fairfield', 'USA', 'California', 92256),
-	   (4058, 'Boulder', 'USA', 'Colorado', 91238),
-	   (4061, 'Fall River', 'USA', 'Massachusetts', 90555)
+BULK INSERT City
+    FROM 'YOUR-PATH-TO-FILE -> \CitiesData.csv'
+    WITH(
+	   FIELDTERMINATOR = ';',
+	   ROWTERMINATOR = '\n');
+GO
+
+CREATE TABLE Station
+	(Id int PRIMARY KEY NOT NULL,
+	City varchar(21) NOT NULL,
+	[State] varchar(2) NOT NULL,
+	Lat_N int NOT NULL,
+	Long_W int NOT NULL)
+GO
+
+BULK INSERT Station
+    FROM 'YOUR-PATH-TO-FILE -> \StationsData.csv'
+    WITH(
+	   FIELDTERMINATOR = ';',
+	   ROWTERMINATOR = '\n');
 GO
