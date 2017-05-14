@@ -1,4 +1,6 @@
 -- First you must create db called HackerRank
+
+-- Basic Select Challegnes
 -- https://www.hackerrank.com/domains/sql/select
 
 USE HackerRank
